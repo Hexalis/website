@@ -1,31 +1,106 @@
-/*index.html za program ledice_html_in_css_posebej.ino*/
+/*ledice_WS_berem_stevilo*/
 
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1.8rem;
+    color: white;
+  }
+  h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #143642;
+  }
+  .topnav {
+    overflow: hidden;
+    background-color: #143642;
+  }
+  body {
+    margin: 0;
+  }
+  .content {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .card {
+    background-color: #F8F7F9;;
+    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    padding-top:10px;
+    padding-bottom:20px;
+  }
+  .button {
+    padding: 15px 50px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #0f8b8d;
+    border: none;
+    border-radius: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  .button:active {
+     background-color: #0f8b8d;
+     box-shadow: 2 2px #CDCDCD;
+     transform: translateY(2px);
+  }
+  .state {
+     font-size: 1.5rem;
+     color:#8c8c8c;
+     font-weight: bold;
+  }
+  .label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #143642;
+  }
+  input[type=number]{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    background-color: #f8f8f8;
+    border-color: #ffffff;
+  }
+  input[type=color]{
+    width: 10%;
+    padding: 2px 2px;
+    margin: 20px 8px;
+    box-sizing: border-box;
+  }
 
-html {
-  font-family: Helvetica;
-  display: inline-block;
-  margin: 0px auto;
-  text-align: center;
-}
-h1{
-  color: #0F3376;
-  padding: 2vh;
-}
-p{
-  font-size: 1.5rem;
-}
-.button {
-  display: inline-block;
-  background-color: #008CBA;
-  border: none;
-  border-radius: 100px;
-  color: white;
-  padding: 16px 40px;
-  text-decoration: none;
-  font-size: 30px;
-  margin: 2px;
-  cursor: pointer;
-}
-.button2 {
-  background-color: #f44336;
+  .led-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+  .led-strip {
+    display: flex;
+    margin: 20px 20px;
+    max-width: 550px;
+    flex-wrap: wrap;
+  }
+  .led {
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  border-color: #000;
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin: 5px;
+  box-shadow: 3px 3px 3px #CDCDCD;
 }
