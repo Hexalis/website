@@ -1,17 +1,84 @@
-<!--index.html za program ledice_html_in_css_posebej.ino-->
+<!--ledice_WS_berem_stevilo-->
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <title>ESP32 Web Server za ledico</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" type="text/css" href="style.css">
+	<!--title-->
+	<title>ESP Web Server</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--routes to additional files-->
+	<link rel="icon" type="image/png" href="led.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
 <body>
-  <h1>ESP32 Web Server za ledico</h1>
-  <p>GPIO state: <strong> %STATE%</strong></p>
-  <p><a href="/on"><button class="button">ON</button></a></p>
-  <p><a href="/off"><button class="button button2">OFF</button></a></p>
+	<!--navigation bar-->
+	<div class="topnav">
+    	<h1>ESP WebSocket Server</h1>
+	</div>
+	<!--content-->
+	<div class="content">
+		<div class="card">
+			<!--input for LED number-->
+			<div class="input-number">
+				<h2 class="led_number">LED number <span id="led_number" style="display: none;">%LED_NUMBER%</span></h2><!--"style="display: none;" take care that the placeholder %LED_NUMBER% is now shown on load-->
+				<label class="label" for="LEDnumberInput">Set Led number</label> 
+				<input id="LEDnumberInput" type="number" min="1" max="30" placeholder="0"><br> 
+			</div>
+			<!--input for LED color-->
+			<div class="input-color">
+				<label class="label" for="LEDcolorPicker">Choose a color</label>
+				<input id="LEDcolorPicker" type="color"><br>     <!--input field for color-->
+				
+			</div>
+			<!--input button-->
+			<div class="input-button">
+				<button id="submitButton" class="button">Submit</button><!--with press on the button the values are sent to the server-->
+			</div>
+			<!--TODO ni se urejeno-->
+			<div class="led-state">
+				<p class="state">state: <span id="state">%STATE%</span></p> <!--%STATE% is a placeholder. we need id for JS-->
+				<p><button id="button" class="button">Toggle</button></p>
+			</div>
+		</div>
+	</div>
+	<div class="led-container">
+		<div class="led-strip">
+			<!-- Create 30 LED squares for feedback -->
+			<div class="led">1</div>
+			<div class="led">2</div>
+			<div class="led">3</div>
+			<div class="led">4</div>
+			<div class="led">5</div>
+			<div class="led">6</div>
+			<div class="led">7</div>
+			<div class="led">8</div>
+			<div class="led">9</div>
+			<div class="led">10</div>
+			<div class="led">11</div>
+			<div class="led">12</div>
+			<div class="led">13</div>
+			<div class="led">14</div>
+			<div class="led">15</div>
+			<div class="led">16</div>
+			<div class="led">17</div>
+			<div class="led">18</div>
+			<div class="led">19</div>
+			<div class="led">20</div>
+			<div class="led">21</div>
+			<div class="led">22</div>
+			<div class="led">23</div>
+			<div class="led">24</div>
+			<div class="led">25</div>
+			<div class="led">26</div>
+			<div class="led">27</div>
+			<div class="led">28</div>
+			<div class="led">29</div>
+			<div class="led">30</div>
+		</div>
+	</div>
 </body>
 </html>
+
+<script src="script.js"></script>
